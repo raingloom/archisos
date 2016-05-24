@@ -62,3 +62,8 @@ wpa_actiond
 wvdial
 xl2tpd
 zd1211-firmware
+
+lua
+lua51
+lua52
+luajit
