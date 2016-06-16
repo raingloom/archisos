@@ -83,6 +83,7 @@ tigervnc
 openssh
 mosh
 
+lightdm
 xf86-input-wacom
 xorg-xev
 xorg-xhost
