@@ -1,0 +1,24 @@
+xf86-video-amdgpu
+mesa-libgl
+lib32-mesa-libgl
+xf86-video-ati
+catalyst
+catalyst-libgl
+lib32-catalyst-libgl
+xf86-video-intel
+mesa-libgl
+lib32-mesa-libgl
+Intel graphics
+xf86-video-nouveau
+mesa-libgl
+lib32-mesa-libgl
+nvidia
+nvidia-libgl
+lib32-nvidia-libgl
+nvidia-340xx
+nvidia-340xx-libgl
+lib32-nvidia-340xx-libgl
+nvidia-304xx
+nvidia-304xx-libgl
+lib32-nvidia-304xx-libgl
+
