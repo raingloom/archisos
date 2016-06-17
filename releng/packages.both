@@ -54,7 +54,7 @@ sudo
 tcpdump
 testdisk
 usb_modeswitch
-nvim
+vim-minimal
 vpnc
 wget
 wireless_tools
