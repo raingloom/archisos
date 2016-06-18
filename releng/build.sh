@@ -254,6 +254,8 @@ for arch in i686 x86_64; do
     run_once make_packages
 done
 
+run_once make_packages_efi
+
 for arch in i686 x86_64; do
     run_once make_setup_mkinitcpio
     run_once make_customize_airootfs
