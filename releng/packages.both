@@ -63,14 +63,6 @@ wvdial
 xl2tpd
 zd1211-firmware
 
-<<<<<<< HEAD
-lua
-lua51
-lua52
-luajit
-=======
-
-
 zsh
 grml-zsh-config
 tree
