@@ -1,4 +1,4 @@
-FETCH=PKGDEST=$(shell pwd)/pkg pacaur --foreign -Sw
+FETCH=PACMAN=pacaur PKGDEST=$(shell pwd)/pkg pacaur --foreign -Sw
 STORE=repo-add pkg/cache.db.tar.gz pkg/*
 
 
