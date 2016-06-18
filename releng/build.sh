@@ -254,10 +254,6 @@ for arch in i686 x86_64; do
     run_once make_packages
 done
 
-echo make_pacman_conf i686
-cp -v pacmani686.conf pacman.conf
-cp -v pacmani686.conf ${work_dir}/pacman.conf
-
 for arch in i686 x86_64; do
     run_once make_setup_mkinitcpio
     run_once make_customize_airootfs
