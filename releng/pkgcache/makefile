@@ -1,7 +1,8 @@
 FETCH=pacaur --cachedir="$(shell pwd)/pkg" --foreign -Sw
 STORE=repo-add pkg/cache.db.tar.gz $(shell find pkg -name '*.pkg.tar*')
 
-
+symlink:
+	ln -svf "$(shell pwd)/pkg" /tmp/localcache
 base:
 	$(FETCH) base
 	$(STORE)
@@ -20,3 +21,5 @@ packages.x86_64:
 packages.video:
 	$(FETCH) $$(cat ../packages.video)
 	$(STORE)
+clear:
+	rm pkg/* #this should not expand to dotfiles
