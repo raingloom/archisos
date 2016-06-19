@@ -67,7 +67,7 @@ zsh
 grml-zsh-config
 tree
 nano
-nvim
+neovim
 emacs
 mlocate
 lm_sensors
