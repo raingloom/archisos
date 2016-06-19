@@ -1,8 +1,10 @@
 FETCH=pacaur --cachedir="$(shell pwd)/pkg" --foreign -Sw
-STORE=repo-add pkg/cache.db.tar.gz $(shell find pkg -name '*.pkg.tar*')
+STORE=repo-add pkg/archisopkgcache.db.tar.gz $(shell find pkg -name '*.pkg.tar*')
 
+store:
+	$(STORE)
 symlink:
-	ln -svf "$(shell pwd)/pkg" /tmp/localcache
+	ln -svf "$(shell pwd)/pkg" /tmp/archisopkgcache
 base:
 	$(FETCH) base
 	$(STORE)
