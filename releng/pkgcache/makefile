@@ -1,5 +1,5 @@
-FETCH=PKGDEST=$(shell pwd)/pkg pacaur --foreign -Sw
-STORE=repo-add pkg/cache.db.tar.gz pkg/*
+FETCH=PKGDEST=$(shell pwd)/pkg pacaur --foreign --rebuild -Sw
+STORE=repo-add pkg/cache.db.tar.gz $(shell echo pkg/*)
 
 
 base:
