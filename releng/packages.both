@@ -73,6 +73,10 @@ mlocate
 lm_sensors
 which
 
+dialog
+dhcpcd
+ppp
+wpa_supplicant
 iputils
 nmap
 links
@@ -81,11 +85,20 @@ tigervnc
 openssh
 mosh
 
+xf86-video-vesa
+
+xorg-server
+xorg-server-utils
 lightdm
+xorg-apps
+i3-wm
+xorg-drivers
 xf86-input-wacom
 xorg-xev
-xorg-xhost
-i3-wm
+
+rxvt-unicode
+rxvt-unicode-terminfo
+xterm
 
 clang
 gcc
