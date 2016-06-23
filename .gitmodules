@@ -1,0 +1,3 @@
+[submodule "releng/dropconf"]
+	path = releng/dropconf
+	url = https://github.com/raingloom/dropconf.git
