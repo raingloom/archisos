@@ -94,6 +94,9 @@ accountsservice
 lightdm-gtk-greeter
 xorg-apps
 i3-wm
+i3status
+i3lock
+dmenu
 xorg-drivers
 xf86-input-wacom
 xorg-xev
@@ -142,4 +145,4 @@ gifsicle
 gimp
 inkscape
 krita
-nomacs
+feh
