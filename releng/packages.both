@@ -90,6 +90,8 @@ xf86-video-vesa
 xorg-server
 xorg-server-utils
 lightdm
+accountsservice
+lightdm-gtk-greeter
 xorg-apps
 i3-wm
 xorg-drivers
