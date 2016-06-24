@@ -112,11 +112,19 @@ strace
 emscripten
 erlang
 jupyter-notebook
+numpy
+mathjax
+python-matplotlib
 lua
 luarocks
 luajit
 qtcreator
 gedit
+
+git
+mercurial
+
+alsa-utils
 
 dunst
 
@@ -124,6 +132,8 @@ festival-us
 
 cheese
 cool-retro-term
+
+zeal
 
 firefox
 flashplugin
