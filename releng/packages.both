@@ -85,6 +85,8 @@ tigervnc
 openssh
 mosh
 
+chrony
+
 xf86-video-vesa
 
 xorg-server
@@ -126,6 +128,7 @@ mercurial
 
 alsa-utils
 
+xclip
 dunst
 
 festival-us
