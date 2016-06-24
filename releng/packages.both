@@ -73,6 +73,8 @@ mlocate
 lm_sensors
 which
 
+pacaur
+
 dialog
 dhcpcd
 ppp
@@ -84,6 +86,8 @@ reflector
 tigervnc
 openssh
 mosh
+blueman
+rsync
 
 xf86-video-vesa
 
@@ -118,6 +122,18 @@ luajit
 qtcreator
 gedit
 
+thunar
+thunar-archive-plugin
+file-roller
+p7zip
+unrar
+unace
+lrzip
+gvfs
+gvfs-afc
+gvfs-smb
+gvfs-smb
+tumbler
 dunst
 
 festival-us
