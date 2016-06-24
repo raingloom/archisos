@@ -106,6 +106,7 @@ dmenu
 xorg-drivers
 xf86-input-wacom
 xorg-xev
+redshift
 
 rxvt-unicode
 rxvt-unicode-terminfo
