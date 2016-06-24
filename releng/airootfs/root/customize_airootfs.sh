@@ -23,3 +23,4 @@ systemctl enable pacman-init.service choose-mirror.service
 systemctl set-default multi-user.target
 systemctl enable lightdm.service
 systemctl enable chrony.service
+systemctl enable bluetooth.service
