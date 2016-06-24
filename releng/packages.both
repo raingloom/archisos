@@ -89,6 +89,8 @@ mosh
 blueman
 rsync
 
+chrony
+
 xf86-video-vesa
 
 xorg-server
@@ -116,6 +118,9 @@ strace
 emscripten
 erlang
 jupyter-notebook
+numpy
+mathjax
+python-matplotlib
 lua
 luarocks
 luajit
@@ -134,12 +139,20 @@ gvfs-afc
 gvfs-smb
 gvfs-smb
 tumbler
+git
+mercurial
+
+alsa-utils
+
+xclip
 dunst
 
 festival-us
 
 cheese
 cool-retro-term
+
+zeal
 
 firefox
 flashplugin
