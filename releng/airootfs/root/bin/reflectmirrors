@@ -1,0 +1,2 @@
+#/bin/sh
+sudo reflector --verbose --sort score --threads 4 --save /etc/pacman.d/mirrorlist $@

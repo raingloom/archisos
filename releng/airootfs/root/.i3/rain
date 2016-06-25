@@ -1,0 +1,7 @@
+# ALSA volume control
+# set voldev Master
+# set volincr 10
+bindsym $mod+KP_Add      exec amixer sset Master 5%+
+bindsym $mod+KP_Subtract exec amixer sset Master 5%-
+bindsym $mod+KP_Enter    exec amixer sset Master toggle
+bindsym $mod+Scroll_Lock exec i3lock -f
