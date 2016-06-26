@@ -119,7 +119,7 @@ strace
 emscripten
 erlang
 jupyter-notebook
-numpy
+python-numpy
 mathjax
 python-matplotlib
 lua
@@ -160,6 +160,8 @@ flashplugin
 hexchat
 httrack
 pidgin
+purple-facebook-git
+pid
 qtox
 toxic
 tor-browser-en
