@@ -14,7 +14,7 @@ arch=$(uname -m)
 verbose=""
 script_path=$(readlink -f ${0%/*})
 
-arches=(x86_64 i386)
+arches=(x86_64) # i386)
 
 _usage ()
 {
@@ -216,6 +216,17 @@ make_prepare() {
 # Build ISO
 make_iso() {
     mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_name}-${iso_version}-dual.iso"
+}
+
+make_blackarch_strap() {
+	if [ -x ${work_dir}/blackarch_strap.sh ]; then
+		# don't download twice
+		${work_dir}/blackarch_strap.sh
+	else
+		curl https://blackarch.org/strap.sh > ${work_dir}/blackarch_strap.sh
+		chmod +x ${work_dir}/blackarch_strap.sh
+		make_blackarch_strap
+	fi
 }
 
 if [[ ${EUID} -ne 0 ]]; then
