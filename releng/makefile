@@ -1,42 +1,38 @@
-#!/bin/bash
-
-set -e -u
-
 iso_name=archlinux
-iso_label="ARCH_$(date +%Y%m)"
-iso_version=$(date +%Y.%m.%d)
+iso_label="ARCH_$(shell date +%Y%m)"
+iso_version=$(shell date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
 out_dir=out
 gpg_key=
 
-arch=$(uname -m)
+arch=$(shell uname -m)
 verbose=""
-script_path=$(readlink -f ${0%/*})
+script_path=$(shell readlink -f ${0%/*})
 
 arches=(x86_64) # i386)
 
-_usage ()
-{
-    echo "usage ${0} [options]"
-    echo
-    echo " General options:"
-    echo "    -N <iso_name>      Set an iso filename (prefix)"
-    echo "                        Default: ${iso_name}"
-    echo "    -V <iso_version>   Set an iso version (in filename)"
-    echo "                        Default: ${iso_version}"
-    echo "    -L <iso_label>     Set an iso label (disk label)"
-    echo "                        Default: ${iso_label}"
-    echo "    -D <install_dir>   Set an install_dir (directory inside iso)"
-    echo "                        Default: ${install_dir}"
-    echo "    -w <work_dir>      Set the working directory"
-    echo "                        Default: ${work_dir}"
-    echo "    -o <out_dir>       Set the output directory"
-    echo "                        Default: ${out_dir}"
-    echo "    -v                 Enable verbose output"
-    echo "    -h                 This help message"
-    exit ${1}
-}
+#_usage ()
+#{
+#    echo "usage ${0} [options]"
+#    echo
+#    echo " General options:"
+#    echo "    -N <iso_name>      Set an iso filename (prefix)"
+#    echo "                        Default: ${iso_name}"
+#    echo "    -V <iso_version>   Set an iso version (in filename)"
+#    echo "                        Default: ${iso_version}"
+#    echo "    -L <iso_label>     Set an iso label (disk label)"
+#    echo "                        Default: ${iso_label}"
+#    echo "    -D <install_dir>   Set an install_dir (directory inside iso)"
+#    echo "                        Default: ${install_dir}"
+#    echo "    -w <work_dir>      Set the working directory"
+#    echo "                        Default: ${work_dir}"
+#    echo "    -o <out_dir>       Set the output directory"
+#    echo "                        Default: ${out_dir}"
+#    echo "    -v                 Enable verbose output"
+#    echo "    -h                 This help message"
+#    exit ${1}
+#}
 
 # Helper function to run make_*() only one time per architecture.
 run_once() {
