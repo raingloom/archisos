@@ -126,6 +126,7 @@ lua
 luarocks
 luajit
 qtcreator
+zerobrane-studio
 gedit
 
 thunar
@@ -161,7 +162,6 @@ hexchat
 httrack
 pidgin
 purple-facebook-git
-pid
 qtox
 toxic
 tor-browser-en
