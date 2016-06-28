@@ -92,6 +92,8 @@ rsync
 chrony
 
 xf86-video-vesa
+xf86-input-wizardpen
+xf86-input-wacom
 
 xorg-server
 xorg-server-utils
