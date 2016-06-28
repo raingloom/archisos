@@ -1,12 +1,13 @@
 PACARG=
 PKGDEST=$(shell pwd)/pkg
+REPO="archisopkgcache"
 FETCH=PKGDEST=$(PKGDEST) pacaur $(PACARG) --cachedir=$(PKGDEST) --foreign -Sw
-STORE=repo-add pkg/archisopkgcache.db.tar.gz $(shell find pkg -name '*.pkg.tar*')
+STORE=repo-add pkg/$(REPO).tar.gz $(shell find pkg -name '*.pkg.tar*')
 
 store:
 	$(STORE)
 symlink:
-	ln -svf "$(shell pwd)/pkg" /tmp/archisopkgcache
+	ln -svf "$(shell pwd)/pkg/$(REPO)" "/tmp/$(REPO)"
 base:
 	$(FETCH) base
 	$(STORE)
