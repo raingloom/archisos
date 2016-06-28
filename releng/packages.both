@@ -106,7 +106,6 @@ i3status
 i3lock
 dmenu
 xorg-drivers
-xf86-input-wacom
 xorg-xev
 redshift
 
