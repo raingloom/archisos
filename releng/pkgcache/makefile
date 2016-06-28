@@ -1,5 +1,6 @@
 PACARG=
-FETCH=pacaur $(PACARG) --cachedir="$(shell pwd)/pkg" --foreign -Sw
+PKGDEST=$(shell pwd)/pkg
+FETCH=PKGDEST=$(PKGDEST) pacaur $(PACARG) --cachedir=$(PKGDEST) --foreign -Sw
 STORE=repo-add pkg/archisopkgcache.db.tar.gz $(shell find pkg -name '*.pkg.tar*')
 
 store:
