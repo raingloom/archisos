@@ -36,6 +36,7 @@ arches=(x86_64) # i386)
 
 # Setup custom pacman.conf with current cache directories.
 make_pacman_conf() {
+	#TODO
     local _cache_dirs
     _cache_dirs=($(pacman -v 2>&1 | grep '^Cache Dirs:' | sed 's/Cache Dirs:\s*//g'))
     sed -r "s|^#?\\s*CacheDir.+|CacheDir = $(echo -n ${_cache_dirs[@]})|g" ${script_path}/pacman.conf > ${work_dir}/pacman.conf
