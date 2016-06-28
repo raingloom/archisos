@@ -1,3 +1,4 @@
 #!/bin/bash
-umount work/**/**
-rm -r work
+set -e
+umount -R work
+rm -rv work
