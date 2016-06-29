@@ -14,7 +14,7 @@ arch=$(uname -m)
 verbose=""
 script_path=$(readlink -f ${0%/*})
 
-arches=(x86_64) # i386)
+arches=(x86_64 i386)
 
 _usage ()
 {
