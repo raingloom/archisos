@@ -129,6 +129,7 @@ luajit
 qtcreator
 #zerobrane-studio
 gedit
+cmake
 
 thunar
 thunar-archive-plugin
