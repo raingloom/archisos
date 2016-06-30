@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-umount -R work
+find work -exec umount -R '{}' \;
 rm -rv work
