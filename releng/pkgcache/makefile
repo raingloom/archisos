@@ -7,7 +7,7 @@ STORE=repo-add pkg/$(REPO).tar.gz $(shell find pkg -name '*.pkg.tar*')
 store:
 	$(STORE)
 symlink:
-	ln -svf "$(shell pwd)/pkg/$(REPO)" "/tmp/$(REPO)"
+	ln -svf "$(shell pwd)/pkg/" "/tmp/$(REPO)"
 base:
 	$(FETCH) base
 	$(STORE)
