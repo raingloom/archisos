@@ -24,3 +24,5 @@ systemctl set-default multi-user.target
 systemctl enable lightdm.service
 systemctl enable chrony.service
 systemctl enable bluetooth.service
+
+useradd -c "the live system user" -m -G wheel,kvm,audio,users -p "$(crypt tux)" -s /bin/zsh tux
