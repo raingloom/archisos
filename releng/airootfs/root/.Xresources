@@ -1,5 +1,0 @@
-xterm.*.reverseVideo: true
-
-urxvt*foreground: white
-urxvt*background: rgba:0000/0000/0000/cccc
-URxvt.transparent:   true
