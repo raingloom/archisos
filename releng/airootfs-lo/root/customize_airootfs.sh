@@ -22,4 +22,4 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service lightdm.service chrony.service bluetooth.service
 systemctl set-default multi-user.target
 
-#useradd -c "the live system user" -m -G wheel,audio,users -p "$(crypt tux)" -s /bin/zsh tux
+useradd -c "the live system user" -m -G wheel,audio,users -s /bin/zsh tux
