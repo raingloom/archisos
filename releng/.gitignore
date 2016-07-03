@@ -1,3 +1,8 @@
 work/*
 build.log
 out/**
+
+# is just a mount point
+airootfs/**
+# contains site-specific customization and private info
+airootfs-hi/**
