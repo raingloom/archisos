@@ -22,4 +22,11 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service lightdm.service chrony.service bluetooth.service
 systemctl set-default multi-user.target
 
-useradd -c "the live system user" -m -G wheel,audio,users -s /bin/zsh tux
+useradd -c "Tux (pass is tux)" -m -G wheel,audio,users -s /bin/zsh tux
+echo 'tux:tux' | chpasswd
+
+echo '[LightDM]' >> /etc/lightdm/lightdm.conf
+echo 'logind-check-graphical=true' >> /etc/lightdm/lightdm.conf
+
+#downloads steam update and quits immediately
+echo 'quit' | steamcmd
