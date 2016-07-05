@@ -129,7 +129,7 @@ luarocks
 luajit
 qtcreator
 zerobrane-studio
-atom-editor-beta-bin
+#atom-editor-beta-bin
 valgrind
 rust
 cargo
