@@ -24,6 +24,7 @@ systemctl set-default multi-user.target
 
 useradd -c "Tux (pass is tux)" -m -G wheel,audio,users -s /bin/zsh tux
 echo 'tux:tux' | chpasswd
+chown -R tux:tux /home/tux
 
 echo '[LightDM]' >> /etc/lightdm/lightdm.conf
 echo 'logind-check-graphical=true' >> /etc/lightdm/lightdm.conf
