@@ -129,7 +129,6 @@ luarocks
 luajit
 qtcreator
 zerobrane-studio
-#atom-editor-beta-bin
 valgrind
 rust
 cargo
@@ -164,7 +163,6 @@ cool-retro-term
 zeal
 
 firefox
-flashplugin
 hexchat
 httrack
 pidgin
