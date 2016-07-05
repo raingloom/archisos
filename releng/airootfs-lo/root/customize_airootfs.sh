@@ -24,10 +24,28 @@ systemctl set-default multi-user.target
 
 useradd -c "Tux (pass is tux)" -m -G wheel,audio,users -s /bin/zsh tux
 echo 'tux:tux' | chpasswd
-chown -R tux:tux /home/tux
 
 echo '[LightDM]' >> /etc/lightdm/lightdm.conf
 echo 'logind-check-graphical=true' >> /etc/lightdm/lightdm.conf
 
-#downloads steam update and quits immediately
-echo 'quit' | steamcmd
+customize_home() {
+	if which steamcmd &> /dev/null; then
+		#downloads steam update and quits immediately
+		echo 'quit' | steamcmd
+		if [ -f steamscript ]; then
+			cat steamscript | steamcmd
+			rm steamscript
+		fi
+	fi
+	if [ -x customize.sh ]; then
+		./customize.sh
+	fi
+}
+
+local p=`pwd`
+cd /home
+for h in *; do
+	chown -R "$h"":""$h" "$h"
+	customize_home
+done
+cd $p
