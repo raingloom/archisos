@@ -28,24 +28,34 @@ echo 'tux:tux' | chpasswd
 echo '[LightDM]' >> /etc/lightdm/lightdm.conf
 echo 'logind-check-graphical=true' >> /etc/lightdm/lightdm.conf
 
-customize_home() {
-	if which steamcmd &> /dev/null; then
-		#downloads steam update and quits immediately
-		echo 'quit' | steamcmd
-		if [ -f steamscript ]; then
-			cat steamscript | steamcmd
-			rm steamscript
-		fi
-	fi
-	if [ -x customize.sh ]; then
-		./customize.sh
-	fi
+local luarocks="/opt/openresty/luajit/bin/luarocks"
+$luarocks install lapis
+$luarocks install lapis-console
+$luarocks install lapis-exceptions
+$luarocks install lapis-redis
+$luarocks install lapis-systemd
+$luarocks install lua-resty-string
+$luarocks install payments
+$luarocks install moonscript
+
+fixperm() {
+	chown -R "$h"":""$h" "$h"
 }
+
+#updates mlocate database
+updatedb
 
 local p=`pwd`
 cd /home
 for h in *; do
-	chown -R "$h"":""$h" "$h"
-	customize_home
+	cd "$h"
+	fixperm
+	if [ -x customize.sh ]; then
+		local p=`pwd`
+		su -c ./customize.sh "$h"
+		cd "$p"
+		rm customize.sh
+	fi
+	cd /home
 done
 cd $p
