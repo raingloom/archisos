@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-find work -exec umount -R '{}' \; | grep --invert-match -e 'not mounted$'
+sudo find work -exec umount '{}' \; 2> /dev/null
 rm -rv work
