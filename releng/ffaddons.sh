@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 sources=(
 	'https://update.adblockplus.org/latest/adblockplusfirefox.xpi'
 	'https://addons.mozilla.org/firefox/downloads/latest/greasemonkey/addon-748-latest.xpi'
@@ -11,12 +11,9 @@ sources=(
 	'https://addons.mozilla.org/firefox/downloads/latest/lazarus-form-recovery/addon-6984-latest.xpi'
 	'https://lastpass.com/download/cdn/lp4.xpi'
 )
-extd="airootfs-lo/usr/lib/firefox/browser/extensions"
 
+extd="airootfs-hi/usr/lib/firefox/browser/extensions"
 for src in ${sources}; do
+	echo ${src}
 	wget -P "${extd}" "${src}"
-done
-for xpi in ${extd}/*; do
-	unzip -d "${extd}/${xpi}" "${xpi}"
-	mv -Tt "${extd}/$(head -n 1 "${extd}/${xpi}/chrome.manifest" | cut -d ' ' -f 3)" "${extd}/${xpi}"
 done
