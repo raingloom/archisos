@@ -59,3 +59,9 @@ for h in *; do
 	cd /home
 done
 cd $p
+
+for f in customscript_*; do
+	if [ -x "${f}" ]; then
+		"${f}"
+	fi
+done
