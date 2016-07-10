@@ -74,7 +74,7 @@ lm_sensors
 which
 
 pacaur
-
+curl
 dialog
 dhcpcd
 ppp
@@ -89,13 +89,11 @@ tmux
 mosh
 blueman
 rsync
-
 chrony
 
 xf86-video-vesa
 xf86-input-wizardpen
 xf86-input-wacom
-
 xorg-server
 xorg-server-utils
 lightdm
@@ -109,10 +107,14 @@ dmenu
 xorg-drivers
 xorg-xev
 redshift
+alsa-utils
 
 rxvt-unicode
 rxvt-unicode-terminfo
 xterm
+
+ibus-anthy
+otf-ipafont
 
 clang
 gcc
@@ -134,6 +136,10 @@ rust
 cargo
 gedit
 cmake
+tup
+
+openresty
+openresty_luarocks
 
 thunar
 thunar-archive-plugin
@@ -144,22 +150,21 @@ unace
 lrzip
 gvfs
 gvfs-afc
-gvfs-smb
+gvfs-goa
+gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
 gvfs-smb
 tumbler
 git
 mercurial
 
-alsa-utils
 
 xclip
 dunst
-
 festival-us
-
 cheese
-cool-retro-term
-
 zeal
 
 firefox
@@ -172,11 +177,11 @@ toxic
 tor-browser-en
 transmission-qt
 
+love
+love-hg
+
 vlc
 rhythmbox
-playonlinux
-steam
-steamcmd
 
 blender
 gifsicle
@@ -185,5 +190,3 @@ inkscape
 krita
 feh
 aseprite-git
-
-dwarffortress
