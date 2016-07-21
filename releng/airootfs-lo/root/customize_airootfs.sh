@@ -28,6 +28,7 @@ echo 'tux:tux' | chpasswd
 echo '[LightDM]' >> /etc/lightdm/lightdm.conf
 echo 'logind-check-graphical=true' >> /etc/lightdm/lightdm.conf
 
+su -c tux pacaur --noconfirm --noedit -S openresty_luarocks
 local luarocks="/opt/openresty/luajit/bin/luarocks"
 $luarocks install lapis
 $luarocks install lapis-console

@@ -139,7 +139,6 @@ cmake
 tup
 
 openresty
-openresty_luarocks
 
 thunar
 thunar-archive-plugin
