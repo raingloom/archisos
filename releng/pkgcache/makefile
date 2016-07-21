@@ -1,13 +1,15 @@
 PACARG=
 ADDPKG=
 PKGDEST=$(shell pwd)/pkg
-REPO="archisopkgcache"
-PACCMD=PKGDEST='$(PKGDEST)' pacaur $(PACARG) --dbpath='$(shell pwd)/db' --logfile=/dev/null --cachedir='$(PKGDEST)' --foreign --config='$(shell pwd)/../pacman.conf'
+REPO=archisopkgcache
+PACCMD=PKGDEST='$(PKGDEST)' pacaur --dbpath='$(shell pwd)/db' --logfile=/dev/null --cachedir='$(PKGDEST)' --foreign --config='$(shell pwd)/../pacman.conf' $(PACARG)
 FETCH=$(PACCMD) -Sw
 STORE=repo-add 'pkg/$(REPO).db.tar.gz' $(shell find pkg -name '*.pkg.tar*')
 
 addpkg: #for single package, use only for correcting failed downloads
 	$(FETCH) $(ADDPKG)
+paccmd:
+	$(PACCMD)
 dbupdate:
 	$(PACCMD) -Syy
 store:
@@ -29,7 +31,7 @@ packages.x86_64:
 packages.video:
 	$(FETCH) $$(cat ../packages.video)
 dbclear:
-	rm db/*
+	rm -r db/*
 pkgclear:
 	rm pkg/* #this should not expand to dotfiles
 dirs:
