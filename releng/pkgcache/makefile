@@ -4,7 +4,7 @@ PKGDEST=$(shell pwd)/pkg
 REPO="archisopkgcache"
 PACCMD=PKGDEST='$(PKGDEST)' pacaur $(PACARG) --dbpath='$(shell pwd)/db' --logfile=/dev/null --cachedir='$(PKGDEST)' --foreign --config='$(shell pwd)/../pacman.conf'
 FETCH=$(PACCMD) -Sw
-STORE=repo-add 'pkg/$(REPO).db.tar.gz' '$(shell find pkg -name '*.pkg.tar*')'
+STORE=repo-add 'pkg/$(REPO).db.tar.gz' $(shell find pkg -name '*.pkg.tar*')
 
 addpkg: #for single package, use only for correcting failed downloads
 	$(FETCH) $(ADDPKG)
