@@ -46,6 +46,10 @@ run_once() {
     fi
 }
 
+snapshot_stage() {
+	#TODO: stub
+}
+
 # Setup custom pacman.conf with current cache directories.
 make_pacman_conf() {
     local _cache_dirs
