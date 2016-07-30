@@ -7,6 +7,7 @@ iso_label="ARCH_$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
+snap_dir=snap
 out_dir=out
 gpg_key=
 
@@ -48,6 +49,22 @@ run_once() {
 
 snapshot_stage() {
 	#TODO: stub
+}
+
+make_subvolume() {
+	local volname=$1
+	if btrfs subvolume show "${volname}" &> /dev/null; then
+		return
+	fi
+	btrfs subvolume create "${volname}"
+}
+
+make_work_subvolume() {
+	make_subvolume "${work_dir}"
+}
+
+make_snap_subvolume() {
+	make_subvolume "${snap_dir}"
 }
 
 # Setup custom pacman.conf with current cache directories.
@@ -243,13 +260,14 @@ if [[ ${arch} != x86_64 ]]; then
     _usage 1
 fi
 
-while getopts 'N:V:L:D:w:o:g:vh' arg; do
+while getopts 'N:V:L:D:w:s:o:g:vh' arg; do
     case "${arg}" in
         N) iso_name="${OPTARG}" ;;
         V) iso_version="${OPTARG}" ;;
         L) iso_label="${OPTARG}" ;;
         D) install_dir="${OPTARG}" ;;
         w) work_dir="${OPTARG}" ;;
+		s) snap_dir="${OPTARG}" ;;
         o) out_dir="${OPTARG}" ;;
         g) gpg_key="${OPTARG}" ;;
         v) verbose="-v" ;;
