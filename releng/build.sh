@@ -32,6 +32,8 @@ _usage ()
     echo "                        Default: ${install_dir}"
     echo "    -w <work_dir>      Set the working directory"
     echo "                        Default: ${work_dir}"
+	echo "    -s <snap_dir>      Set the BTRFS snapshot directory"
+	echo "                        Default: ${snap_dir}"
     echo "    -o <out_dir>       Set the output directory"
     echo "                        Default: ${out_dir}"
     echo "    -v                 Enable verbose output"
