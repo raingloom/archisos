@@ -31,8 +31,8 @@ packages.x86_64:
 packages.video:
 	$(FETCH) $$(cat ../packages.video)
 dbclear:
-	sudo rm -r db/*
+	sudo rm -rf db
 pkgclear:
-	rm pkg/* #this should not expand to dotfiles
+	rm -rf pkg #this should not expand to dotfiles
 dirs:
 	mkdir -p pkg db
