@@ -79,6 +79,7 @@ dialog
 dhcpcd
 ppp
 wpa_supplicant
+macchanger
 iputils
 nmap
 links
@@ -121,7 +122,6 @@ gcc
 gdb
 strace
 emscripten
-erlang
 jupyter-notebook
 python-numpy
 mathjax
@@ -130,6 +130,7 @@ lua
 luarocks
 luajit
 qtcreator
+atom
 zerobrane-studio
 valgrind
 rust
@@ -175,6 +176,7 @@ qtox
 toxic
 tor-browser-en
 transmission-qt
+libreoffice
 
 love
 love-hg
