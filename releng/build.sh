@@ -46,13 +46,16 @@ run_once() {
     if [[ ! -e ${work_dir}/build.${1}_${arch} ]]; then
         $1
         touch ${work_dir}/build.${1}_${arch}
+		snapshot_stage $1
     fi
 }
 
 snapshot_stage() {
 	#TODO: stub
+	btrfs subvolume snapshot "${work_dir}" "${snap_dir}/${iso_name}-${1}"
 }
 
+#Creates subvolume if it does not exist
 make_subvolume() {
 	local volname=$1
 	if btrfs subvolume show "${volname}" &> /dev/null; then
