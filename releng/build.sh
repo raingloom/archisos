@@ -281,7 +281,7 @@ while getopts 'N:V:L:D:w:s:o:g:vh' arg; do
     esac
 done
 
-mkdir -p ${work_dir}
+btrfs subvolume create ${work_dir}
 
 run_once make_pacman_conf
 
