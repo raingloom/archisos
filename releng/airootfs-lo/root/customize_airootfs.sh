@@ -19,7 +19,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service lightdm.service chrony.service bluetooth.service
+systemctl enable pacman-init.service choose-mirror.service lightdm.service chrony.service bluetooth.service preload.service
 systemctl set-default multi-user.target
 
 useradd -c "Tux (pass is tux)" -m -G wheel,audio,users -s /bin/zsh tux
