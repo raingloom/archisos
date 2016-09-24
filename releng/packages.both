@@ -72,6 +72,7 @@ emacs
 mlocate
 lm_sensors
 which
+preload
 
 pacaur
 curl
@@ -177,6 +178,7 @@ toxic
 tor-browser-en
 transmission-qt
 libreoffice
+mcomix
 
 love
 love-hg
