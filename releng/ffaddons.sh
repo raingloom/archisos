@@ -1,6 +1,6 @@
 #!/bin/zsh
 sources=(
-	'https://update.adblockplus.org/latest/adblockplusfirefox.xpi'
+	'https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/addon-607454-latest.xpi'
 	'https://addons.mozilla.org/firefox/downloads/latest/greasemonkey/addon-748-latest.xpi'
 	'https://addons.mozilla.org/firefox/downloads/latest/downthemall/addon-201-latest.xpi'
 	'https://addons.mozilla.org/firefox/downloads/latest/markdown-viewer/addon-405191-latest.xpi'
