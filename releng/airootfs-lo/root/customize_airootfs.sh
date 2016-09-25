@@ -35,6 +35,9 @@ fixperm() {
 #updates mlocate database
 updatedb
 
+#updates package database so we can install stuff into the live system
+pacman -Syy
+
 local p=`pwd`
 cd /home
 for h in *; do
