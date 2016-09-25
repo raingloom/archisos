@@ -125,7 +125,7 @@ strace
 emscripten
 jupyter-notebook
 python-numpy
-pip
+python-pip
 mathjax
 python-matplotlib
 lua
